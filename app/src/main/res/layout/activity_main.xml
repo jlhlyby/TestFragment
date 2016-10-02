@@ -8,6 +8,26 @@
       android:id="@+id/titlle_fragment"
       android:name="com.jlhlyby.testfragment.TitleFragment"
       android:layout_width="match_parent"
-      android:layout_height="30dp"/>
+      android:layout_height="30dp"
+      android:layout_alignParentTop="true"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentStart="true" />
+    <FrameLayout
+        android:id="@+id/content_fragment"
+        android:layout_below="@+id/titlle_fragment"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </FrameLayout>
+    <fragment
+        android:id="@+id/bottom_fagment"
+        android:name="com.jlhlyby.testfragment.BottomFragment"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
