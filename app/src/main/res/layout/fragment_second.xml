@@ -2,23 +2,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.jlhlyby.testfragment.ContentFragment">
+    tools:context="com.jlhlyby.testfragment.SecondFragment">
 
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="跳转二Fragment"
-        android:id="@+id/button2"
+        android:text="打开三Fragment"
+        android:id="@+id/button3"
+        android:layout_gravity="center"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
-
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/editText"
         android:hint="输入个数字"
-        android:layout_above="@+id/button2"
+        android:layout_above="@+id/button3"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true" />
 </RelativeLayout>

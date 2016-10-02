@@ -13,18 +13,18 @@ import android.widget.Button;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ContentFragment extends Fragment {
+public class SecondFragment extends Fragment {
     Button btn;
 
-    public ContentFragment() {
-        super();
+    public SecondFragment() {
+        // Required empty public constructor
     }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.fragment_content,container,false);
+        View view = inflater.inflate(R.layout.fragment_second, container, false);
         initView(view);
         initClick();
         return view;
@@ -40,15 +40,17 @@ public class ContentFragment extends Fragment {
     }
 
     private void goToNext() {
-      FragmentTransaction fragmentTransaction= getFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.content_fragment,new SecondFragment());
+        FragmentTransaction fragmentTransaction= getFragmentManager().beginTransaction();
+        fragmentTransaction.hide(this);
+        fragmentTransaction.add(R.id.content_fragment,new ThreeFragment());
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
 
 
     private void initView(View view) {
-        btn= (Button) view.findViewById(R.id.button2);
+        btn= (Button) view.findViewById(R.id.button3);
     }
+
 
 }
